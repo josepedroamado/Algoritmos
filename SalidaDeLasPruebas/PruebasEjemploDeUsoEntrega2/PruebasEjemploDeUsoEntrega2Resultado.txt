@@ -1,0 +1,990 @@
+********* INICIO PRUEBAS ObtenerRepetidos*******
+-----------------------------------
+Prueba 0: Prueba ObtenerRepetidos 1
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 1: Prueba ObtenerRepetidos 2 -> OK
+-----------------------------------
+Prueba 2: Prueba ObtenerRepetidos 3
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 3: Prueba ObtenerRepetidos 4
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 10
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 4: Prueba ObtenerRepetidos 5 -> OK
+-----------------------------------
+Prueba 5: Prueba ObtenerRepetidos 6 -> OK
+-----------------------------------
+Prueba 6: Prueba ObtenerRepetidos 7
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 7: Prueba ObtenerRepetidos 8 -> OK
+-----------------------------------
+Prueba 8: Prueba ObtenerRepetidos 9
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 4 6
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 9: Prueba ObtenerRepetidos 10
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2 4
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 10: Prueba ObtenerRepetidos 11
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 6
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 11: Prueba ObtenerRepetidos 12
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 6 7
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+********* FIN PRUEBAS ObtenerRepetidos*******
+
+********* INICIO PRUEBAS ContarOcurrencias*******
+-----------------------------------
+Prueba 12: Prueba ContarOcurrencias 1
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:2} {D:2|R:1}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 13: Prueba ContarOcurrencias 2 -> OK
+-----------------------------------
+Prueba 14: Prueba ContarOcurrencias 3
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:2} {D:2|R:2} {D:3|R:1}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 15: Prueba ContarOcurrencias 4
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:4} {D:5|R:1} {D:8|R:1} {D:10|R:2}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 16: Prueba ContarOcurrencias 5
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:1}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 17: Prueba ContarOcurrencias 6
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:1} {D:2|R:1} {D:3|R:1} {D:4|R:1} {D:5|R:1} {D:6|R:1} {D:7|R:1} {D:8|R:1} {D:9|R:1} {D:10|R:1}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 18: Prueba ContarOcurrencias 7
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:6}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 19: Prueba ContarOcurrencias 8
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:1} {D:10|R:1} {D:100|R:1} {D:1000|R:1}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 20: Prueba ContarOcurrencias 9
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:4|R:4} {D:6|R:4}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 21: Prueba ContarOcurrencias 10
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:1|R:3} {D:2|R:3} {D:4|R:2} {D:7|R:1}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+********* FIN PRUEBAS ContarOcurrencias*******
+
+********* INICIO PRUEBAS Xor de multisets*******
+-----------------------------------
+Prueba 22: Prueba Xor de multisets 1 -> OK
+-----------------------------------
+Prueba 23: Prueba Xor de multisets 2 -> OK
+-----------------------------------
+Prueba 24: Prueba Xor de multisets 3
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2 3
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 25: Prueba Xor de multisets 4
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2 3
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 26: Prueba Xor de multisets 5
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 2 4 7 8
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 27: Prueba Xor de multisets 6
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 28: Prueba Xor de multisets 7
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2 3 3
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 29: Prueba Xor de multisets 8
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 1 1
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 30: Prueba Xor de multisets 9
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 1 1 5
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 31: Prueba Xor de multisets 10
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 0
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+********* FIN PRUEBAS Xor de multisets*******
+
+********* INICIO PRUEBAS Paréntesis Balanceados*******
+-----------------------------------
+Prueba 32: Prueba parentesisBalanceados 1
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Estan balanceados
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! No estan balanceados
+ 2: 
+-----------------------------------
+Prueba 33: Prueba parentesisBalanceados 2
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Estan balanceados
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! No estan balanceados
+ 2: 
+-----------------------------------
+Prueba 34: Prueba parentesisBalanceados 3
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Estan balanceados
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! No estan balanceados
+ 2: 
+-----------------------------------
+Prueba 35: Prueba parentesisBalanceados 4 -> OK
+-----------------------------------
+Prueba 36: Prueba parentesisBalanceados 5 -> OK
+-----------------------------------
+Prueba 37: Prueba parentesisBalanceados 6 -> OK
+-----------------------------------
+Prueba 38: Prueba parentesisBalanceados 7 -> OK
+-----------------------------------
+Prueba 39: Prueba parentesisBalanceados 8 -> OK
+-----------------------------------
+Prueba 40: Prueba parentesisBalanceados 9
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Estan balanceados
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! No estan balanceados
+ 2: 
+-----------------------------------
+Prueba 41: Prueba parentesisBalanceados 10 -> OK
+********* FIN PRUEBAS Paréntesis Balanceados*******
+
+********* INICIO PRUEBAS ImprimirPorNiveles AG*******
+-----------------------------------
+Prueba 42: Prueba imprimir AG por niveles 1 -> OK
+-----------------------------------
+Prueba 43: Prueba imprimir AG por niveles 2
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 -7 3 4 5 15 8 34 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+-----------------------------------
+Prueba 44: Prueba imprimir AG por niveles 3
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 -7 3 4 5 15 8 7 2 1 34 24 13 7 1 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+********* FIN PRUEBAS ImprimirPorNiveles AG*******
+
+********* INICIO PRUEBAS LISTA ORD*******
+-----------------------------------
+Prueba 45: Imprimo la lista luego de agregar 9 datos -> OK
+-----------------------------------
+Prueba 46: Imprimo el largo de la lista -> OK
+-----------------------------------
+Prueba 47: Imprimo la lista original y su clon -> OK
+-----------------------------------
+Prueba 48: Imprimo la lista original y la obtenida -> OK
+-----------------------------------
+Prueba 49: Imprimo prueba de == sobre listas iguales -> OK
+-----------------------------------
+Prueba 50: Imprimo prueba de == sobre listas distintas -> OK
+-----------------------------------
+Prueba 51: Imprimo el principio de la lista -> OK
+-----------------------------------
+Prueba 52: Imprimo el fin de la lista -> OK
+-----------------------------------
+Prueba 53: Imprimo la lista luego de eliminar el principio -> OK
+-----------------------------------
+Prueba 54: Imprimo la lista luego de eliminar el fin -> OK
+-----------------------------------
+Prueba 55: Imprimo la lista luego de eliminar el elemento 3 -> OK
+-----------------------------------
+Prueba 56: Imprimo la recuperación del elemento 2 -> OK
+-----------------------------------
+Prueba 57: Imprimo si el elemento 2 existe en la lista -> OK
+-----------------------------------
+Prueba 58: Imprimo si el elemento 6 existe en la lista -> OK
+-----------------------------------
+Prueba 59: Imprimo si la lista es vacia -> OK
+-----------------------------------
+Prueba 60: Imprimo si la lista creada es vacia  -> OK
+-----------------------------------
+Prueba 61: Imprimo si la lista esta llena -> OK
+-----------------------------------
+Prueba 62: Imprimo la lista luego de vaciarla -> OK
+-----------------------------------
+Prueba 63: Imprimo si la lista es vacia -> OK
+********* FIN PRUEBAS LISTA ORD*******
+
+********* INICIO PRUEBAS LISTA ORD*******
+-----------------------------------
+Prueba 64: Imprimo la lista luego de agregar 9 datos
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 1 2 3 3 4 5 6 6
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 65: Imprimo el largo de la lista
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 9
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 0
+ 2: 
+-----------------------------------
+Prueba 66: Imprimo la lista original y su clon
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Resultado Original: 
+ 2: 1 1 2 3 3 4 5 6 6
+ 3: 
+ 4: Resultado Clon: 
+ 5: 1 1 2 3 3 4 5 6 6
+ 6: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Resultado Original: 
+ 2! 
+ 3: 
+ 4: Resultado Clon: 
+ 5! 
+ 6: 
+-----------------------------------
+Prueba 67: Imprimo la lista original y la obtenida
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Resultado Original: 
+ 2: 1 1 2 3 3 4 5 6 6
+ 3: 
+ 4: Resultado lista obtenida operador =: 
+ 5: 1 1 2 3 3 4 5 6 6
+ 6: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Resultado Original: 
+ 2! 
+ 3: 
+ 4: Resultado lista obtenida operador =: 
+ 5! 
+ 6: 
+-----------------------------------
+Prueba 68: Imprimo prueba de == sobre listas iguales -> OK
+-----------------------------------
+Prueba 69: Imprimo prueba de == sobre listas distintas
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: La lista original no es igual a la lista clon
+ 2: 
+ 3: 
+ 4: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! La lista original es igual a la lista clon
+ 2: 
+ 3: 
+ 4: 
+-----------------------------------
+Prueba 70: Imprimo el principio de la lista
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 0
+ 2: 
+-----------------------------------
+Prueba 71: Imprimo el fin de la lista
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 6
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 0
+ 2: 
+-----------------------------------
+Prueba 72: Imprimo la lista luego de eliminar el principio
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2 3 3 4 5 6 6
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 73: Imprimo la lista luego de eliminar el fin
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2 3 3 4 5 6
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 74: Imprimo la lista luego de eliminar el elemento 3
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 2 3 4 5 6
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 75: Imprimo la recuperación del elemento 2
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 2
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 0
+ 2: 
+-----------------------------------
+Prueba 76: Imprimo si el elemento 2 existe en la lista
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Elemento 2 pertenece  a la lista
+ 2: 
+ 3: 
+ 4: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Elemento 2 no pertenece a la lista
+ 2: 
+ 3: 
+ 4: 
+-----------------------------------
+Prueba 77: Imprimo si el elemento 6 existe en la lista
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Elemento 6 pertenece  a la lista
+ 2: 
+ 3: 
+ 4: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Elemento 6 no pertenece a la lista
+ 2: 
+ 3: 
+ 4: 
+-----------------------------------
+Prueba 78: Imprimo si la lista es vacia
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: La lista no se encuentra vacia
+ 2: 
+ 3: 
+ 4: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! La lista se encuentra vacia
+ 2: 
+ 3: 
+ 4: 
+-----------------------------------
+Prueba 79: Imprimo si la lista creada es vacia  -> OK
+-----------------------------------
+Prueba 80: Imprimo si la lista esta llena -> OK
+-----------------------------------
+Prueba 81: Imprimo la lista luego de vaciarla -> OK
+-----------------------------------
+Prueba 82: Imprimo si la lista es vacia -> OK
+********* FIN PRUEBAS LISTA ORD*******
+
+********* INICIO PRUEBAS TABLA*******
+-----------------------------------
+Prueba 83: Imprimo la tabla luego de agregar cuatro elementos
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:Cinco|R:25} {D:Cuatro|R:16} {D:Dos|R:4} {D:Tres|R:9}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 84: Imprimo la cantidad de elementos en la tabla 
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 4
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 0
+ 2: 
+-----------------------------------
+Prueba 85: Imprimo la tabla y su clon
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Resultado Original: 
+ 2: {D:Cinco|R:25} {D:Cuatro|R:16} {D:Dos|R:4} {D:Tres|R:9}
+ 3: 
+ 4: Resultado Clon: 
+ 5: {D:Cinco|R:25} {D:Cuatro|R:16} {D:Dos|R:4} {D:Tres|R:9}
+ 6: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Resultado Original: 
+ 2! 
+ 3: 
+ 4: Resultado Clon: 
+ 5! 
+ 6: 
+-----------------------------------
+Prueba 86: Imprimo la tabla y la tabla obtenida
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Resultado Original: 
+ 2: {D:Cinco|R:25} {D:Cuatro|R:16} {D:Dos|R:4} {D:Tres|R:9}
+ 3: 
+ 4: Resultado tabla utilizando operador =: 
+ 5: {D:Cinco|R:25} {D:Cuatro|R:16} {D:Dos|R:4} {D:Tres|R:9}
+ 6: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Resultado Original: 
+ 2! 
+ 3: 
+ 4: Resultado tabla utilizando operador =: 
+ 5! 
+ 6: 
+-----------------------------------
+Prueba 87: Imprimo prueba de == sobre tablas iguales
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: La tabla original es igual a la tabla clon
+ 2: 
+ 3: 
+ 4: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! La tabla original no es igual a la tabla clon
+ 2: 
+ 3: 
+ 4: 
+-----------------------------------
+Prueba 88: Imprimo prueba de == sobre tablas distintas -> OK
+-----------------------------------
+Prueba 89: Imprimo si Dos se encuentra definido en la tabla
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Dos se encuentra definido en la tabla
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Dos no se encuentra definido en la tabla
+ 2: 
+-----------------------------------
+Prueba 90: Imprimo si Uno se encuentra definido en la tabla -> OK
+-----------------------------------
+Prueba 91: Imprimo la recuperación del elemento Dos
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 4
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 0
+ 2: 
+-----------------------------------
+Prueba 92: Imprimo la tabla luego de borrar el elemento Tres
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: {D:Cinco|R:25} {D:Cuatro|R:16} {D:Dos|R:4}
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 93: Imprimo si la tabla es vacia
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: La tabla no se encuentra vacia
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! La tabla se encuentra vacia
+ 2: 
+-----------------------------------
+Prueba 94: Imprimo si la tabla creada  es vacia -> OK
+-----------------------------------
+Prueba 95: Imprimo si la tabla creada  se encuentra llena -> OK
+-----------------------------------
+Prueba 96: Imprimo la tabla luego de vaciarla -> OK
+-----------------------------------
+Prueba 97: Imprimo si la tabla es vacia -> OK
+********* FIN PRUEBAS TABLA*******
+
+********* INICIO PRUEBAS MULTISET*******
+-----------------------------------
+Prueba 98: Imprimo la Multiset luego de agregar 10 datos se espera que la cantidad de elementos sea 5
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1 1 1 2 3 3 3 4 5 5 5
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 
+ 2: 
+-----------------------------------
+Prueba 99: Imprimo el Multiset luego de eliminar una ocurrencia del elemento 2
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 2- Es null?: True
+ 2: 1 1 1 3 3 3 4 5 5 5
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: 2- Es null?: True
+ 2! 
+ 3: 
+-----------------------------------
+Prueba 100: Imprimo el Multiset luego de eliminar dos ocurrencias del elemento 1
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 1- Es null?: True
+ 2: 1 3 3 3 4 5 5 5
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: 1- Es null?: True
+ 2! 
+ 3: 
+-----------------------------------
+Prueba 101: Muestro la cantidad de ocurrencias de un elemento
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Cantidad Ocurrencias del 3: 3 == 3
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Cantidad Ocurrencias del 3: 0 == 3
+ 2: 
+-----------------------------------
+Prueba 102: Muestro que el multiset no es vacio
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Es Vacio: False == False
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Es Vacio: True == False
+ 2: 
+-----------------------------------
+Prueba 103: Clono el multiset y imprmio el original y el clon
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Resultado Original: 
+ 2: 1 3 3 3 4 5 5 5
+ 3: Resultado Clon: 
+ 4: 1 3 3 3 4 5 5 5
+ 5: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Resultado Original: 
+ 2! 
+ 3: Resultado Clon: 
+ 4! 
+ 5: 
+-----------------------------------
+Prueba 104: Asigno un nuevo multiset y imprimo la original y la asignada
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Resultado Original: 
+ 2: 1 3 3 3 4 5 5 5
+ 3: Resultado Clon: 
+ 4: 1 3 3 3 4 5 5 5
+ 5: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Resultado Original: 
+ 2! 
+ 3: Resultado Clon: 
+ 4! 
+ 5: 
+-----------------------------------
+Prueba 105: Muestro que el set clon y el original son iguales
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Es Igual: True == True
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Es Igual: False == True
+ 2: 
+-----------------------------------
+Prueba 106: Vacio el multiset y lo imprimo, verifico que sea vacio -> OK
+-----------------------------------
+Prueba 107: Creo un multiset usando CrearVacia y muestro que es vacio -> OK
+-----------------------------------
+Prueba 108: Muestro la cantidad de elementos del multiset original y el clon
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Resultado MultiSet Original: 0 == 0
+ 2: Resultado MultiSet Clon: 4 == 4
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Resultado MultiSet Original: 0 == 0
+ 2! Resultado MultiSet Clon: 0 == 4
+ 3: 
+-----------------------------------
+Prueba 109: Imprimo un elemento del set recuperado
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: 4 == 4 Elemento recuperado igual al elemento esperado: True
+ 2: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! 4 == 0 Elemento recuperado igual al elemento esperado: False
+ 2: 
+-----------------------------------
+Prueba 110: Imprimo un elemento del multiset recuperado y pregunto si pertenece -> OK
+-----------------------------------
+Prueba 111: Pregunto si todos los elementos pertenecen al multiset -> OK
+-----------------------------------
+Prueba 112: Pruebo la union entre dos multiset
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Se espera: 1 2 2 3
+ 2: Se obtiene:1 2 2 3
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Se espera: 
+ 2! Se obtiene:
+ 3: 
+-----------------------------------
+Prueba 113: Pruebo la Interseccion entre dos multiset
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Se espera: 2 2
+ 2: Se obtiene:2 2
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Se espera: 
+ 2! Se obtiene:
+ 3: 
+-----------------------------------
+Prueba 114: Segunda prueba  Interseccion entre dos multiset
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Se espera: 1 2 2 3 3
+ 2: Se obtiene:1 2 2 3 3
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Se espera: 
+ 2! Se obtiene:
+ 3: 
+-----------------------------------
+Prueba 115: Pruebo la Diferencia entre dos multiset
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Se espera: 1 1 2 2
+ 2: Se obtiene:1 1 2 2
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! Se espera: 
+ 2! Se obtiene:
+ 3: 
+-----------------------------------
+Prueba 116: Pruebo  ContendioEn entre dos multiset
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: MultiSet A: 1 1 2
+ 2: MultiSet B:1 1 1 2 2 3
+ 3: A contenidoEn B:1 == True
+ 4: B contenidoEn A:0 == False
+ 5: A contenidoEn A:1 == True
+ 6: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! MultiSet A: 
+ 2! MultiSet B:
+ 3! A contenidoEn B:0 == True
+ 4: B contenidoEn A:0 == False
+ 5! A contenidoEn A:0 == True
+ 6: 
+-----------------------------------
+Prueba 117: Pruebo la ContendioEn entre dos multiset
+ -> ERROR impresión incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: MultiSet A: 4 4 5 6
+ 2: MultiSet B:4 4 5 5 6 6 6
+ 3: A contenidoEn B:1 == True
+ 4: B contenidoEn A:0 == False
+ 5: A contenidoEn A:1 == True
+ 6: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1! MultiSet A: 
+ 2! MultiSet B:
+ 3! A contenidoEn B:0 == True
+ 4: B contenidoEn A:0 == False
+ 5! A contenidoEn A:0 == True
+ 6: 
+********* FIN PRUEBAS MULTISET*******
+
+
+
+----------------
+PRUEBAS CORRECTAS: 48
+PRUEBAS INCORRECTAS: 70
+PRUEBAS NO IMPLEMENTADAS: 0
+PRUEBAS COMENTADAS: 0
