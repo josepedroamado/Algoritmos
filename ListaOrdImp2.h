@@ -56,6 +56,11 @@ public:
 
 protected:
 	// Atributos
+	NodoABB<T> * arbol; //Lista de elementos en forma de arbol
+	int cantElem; //Cantidad de elementos en la lista
+
+	//Metodos
+	void agregarAux(NodoABB<T> *arbol, const T &e) const; //Funcion auxiliar para agregar elementos de forma ordenada
 };
 
 #include "ListaOrdImp2.cpp"

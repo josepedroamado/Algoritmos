@@ -19,26 +19,39 @@ ListaOrd<T>* ListaOrdImp2<T>::CrearVacia() const
 template <class T>
 ListaOrdImp2<T>::ListaOrdImp2()
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->arbol = NULL;
+	this->cantElem = 0;
 }
 
 template <class T>
 ListaOrdImp2<T>::ListaOrdImp2(const ListaOrd<T> &l) 
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->arbol = NULL;
+	this->cantElem = 0;
+	*this = l;
 }
 
 template <class T>
 ListaOrdImp2<T>::ListaOrdImp2(const ListaOrdImp2<T> &l) 
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->arbol = NULL;
+	this->cantElem = 0;
+	*this = l;
 }
 
 template <class T>
 ListaOrd<T> &ListaOrdImp2<T>::operator=(const ListaOrd<T> &l) 
 { 
 	if (this != &l) {
-		// NO IMPLEMENTADA
+		//IMPLEMENTADA
+		this->Vaciar();
+		this->cantElem = l.CantidadElementos();
+		for (Iterador<T> &i = l.GetIterador(); !i.EsFin(); i.Resto()) {
+			this->AgregarOrd(i.Elemento());
+		}
 	}
 	return *this;
 }
@@ -47,7 +60,12 @@ template <class T>
 ListaOrd<T> &ListaOrdImp2<T>::operator=(const ListaOrdImp2<T> &l) 
 { 
 	if (this != &l) {
-		// NO IMPLEMENTADA
+		//IMPLEMENTADA
+		this->Vaciar();
+		this->cantElem = l.CantidadElementos();
+		for (Iterador<T> &i = l.GetIterador(); !i.EsFin(); i.Resto()) {
+			this->AgregarOrd(i.Elemento());
+		}
 	}
 	return *this;
 }
@@ -55,13 +73,15 @@ ListaOrd<T> &ListaOrdImp2<T>::operator=(const ListaOrdImp2<T> &l)
 template <class T>
 ListaOrdImp2<T>::~ListaOrdImp2()
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->Vaciar();
 }
 
 template <class T>
 void ListaOrdImp2<T>::AgregarOrd(const T &e) 
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->agregarAux(arbol, e);
 }
 
 template <class T>
@@ -113,35 +133,41 @@ bool ListaOrdImp2<T>::Existe(const T &e) const
 template <class T>
 void ListaOrdImp2<T>::Vaciar() 
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->cantElem = 0;
+	delete this->arbol;
+	this->arbol = NULL;
 }
 
 template <class T>
 unsigned int ListaOrdImp2<T>::CantidadElementos()const 
 { 
-	// NO IMPLEMENTADA
-	return 0;
+	//IMPLEMENTADA
+	return this->cantElem;
 }
 
 template <class T>
 bool ListaOrdImp2<T>::EsVacia()const 
 {
-	// NO IMPLEMENTADA
-	return true;
+	//IMPLEMENTADA
+	if (cantElem == 0) return true;
+	else return false;
 }
 
 template <class T>
 bool ListaOrdImp2<T>::EsLlena()const 
 { 
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
 	return false;
 }
 
 template<class T>
 ListaOrd<T>* ListaOrdImp2<T>::Clon() const
 {
-	// NO IMPLEMENTADA
-	return new ListaOrdImp2<T>();
+	//IMPLEMENTADA
+	ListaOrd<T>* newList = this->CrearVacia();
+	*newList = *this;
+	return newList;
 }
 
 template <class T>
@@ -159,6 +185,19 @@ void ListaOrdImp2<T>::Imprimir(ostream& o) const
 {
 	// NO IMPLEMENTADA
 	// en luegar de hacer cout << ... poner o << ...
+}
+
+template<class T>
+void ListaOrdImp2<T>::agregarAux(NodoABB<T>* arbol, const T & e) const
+{
+	if (e == arbol->dato){
+		arbol->auxiliar++;
+	}
+	else{
+		if (e < arbol->dato){
+
+		}
+	}
 }
 
 
