@@ -82,52 +82,81 @@ void ListaOrdImp2<T>::AgregarOrd(const T &e)
 {
 	//IMPLEMENTADA
 	this->agregarAux(arbol, e);
+	cantElem++;
 }
 
 template <class T>
 void ListaOrdImp2<T>::BorrarMinimo() 
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	if (arbol != NULL) {
+		NodoABB<T> * nodo = minAux(arbol);
+		if (nodo->auxiliar == 0) {
+			NodoAB<T> *borrar = nodo;
+			nodo = nodo->der;
+			delete borrar;
+			cantElem--;
+		}
+		else {
+			a->auxiliar--;
+			cantElem--;
+		}
+	}
 }
 
 template <class T>
 void ListaOrdImp2<T>::BorrarMaximo() 
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	if (arbol != NULL) {
+		NodoABB<T> * nodo = maxAux(arbol);
+		if (nodo->auxiliar == 0) {
+			NodoAB<T> *borrar = nodo;
+			nodo = nodo->izq;
+			delete borrar;
+			cantElem--;
+		}
+		else {
+			a->auxiliar--;
+			cantElem--;
+		}
+	}
 }
 
 template <class T>
 void ListaOrdImp2<T>::Borrar(const T &e)
 {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	borrarAux(arbol, e);
+	cantElem--;
 }
 
 template <class T>
 const T& ListaOrdImp2<T>::Minimo() const 
 {
-	// NO IMPLEMENTADA
-	return *new T();
+	//IMPLEMENTADA
+	return minAux(arbol)->dato;
 }
 
 template <class T>
 const T& ListaOrdImp2<T>::Maximo() const 
 {
-	// NO IMPLEMENTADA
-	return *new T();
+	//IMPLEMENTADA
+	return maxAux(arbol)->dato;
 }
 
 template <class T>
 const T& ListaOrdImp2<T>::Recuperar(const T &e) const 
 {
-	// NO IMPLEMENTADA
-	return *new T();
+	//IMPLEMENTADA
+	return recuperarAux(arbol, e)->dato;
 }
 
 template <class T>
 bool ListaOrdImp2<T>::Existe(const T &e) const 
 {
-	// NO IMPLEMENTADA
-	return false;
+	//IMPLEMENTADA
+	return existeAux(arbol, e);
 }
 
 template <class T>
@@ -187,18 +216,113 @@ void ListaOrdImp2<T>::Imprimir(ostream& o) const
 	// en luegar de hacer cout << ... poner o << ...
 }
 
-template<class T>
-void ListaOrdImp2<T>::agregarAux(NodoABB<T>* arbol, const T & e) const
-{
-	if (e == arbol->dato){
-		arbol->auxiliar++;
-	}
-	else{
-		if (e < arbol->dato){
+//AUXILIARES
 
+template<class T>
+void ListaOrdImp2<T>::agregarAux(NodoABB<T>* a, const T & e) const
+{
+	if (a == NULL){
+		NodoABB<T> * nuevo = new NodoABB(e);
+		nuevo->auxiliar++;
+		a = nuevo;
+	}
+	else {
+		if (e == a->dato) a->auxiliar++;
+		else {
+			if (e < a->dato) agregarAux(a->izq, e);
+			else agregarAux(a->der, e);
 		}
 	}
 }
 
+template<class T>
+bool ListaOrdImp2<T>::existeAux(NodoABB<T>* a, const T & e) const
+{
+	if (a != NULL) {
+		if (e == a->dato) return true;
+		else {
+			if (e < a->dato) return existeAux(a->izq, e);
+			else return existeAux(a->der, e);
+		}
+	}
+	else return false;
+}
+
+
+template<class T>
+void ListaOrdImp2<T>::borrarAux(NodoABB<T>* a, const T & e)
+{
+	if (a != NULL){
+		if (e < a->dato) borrarAux(a->izq, e);
+		else{
+			if (e > a->dato) borrarAux(a->der, e);
+			else {
+				if (a->izq == NULL){
+					if (a->auxiliar == 1) {
+						NodoAB<T> *borrar = a;
+						a = a->der;
+						delete borrar;
+					}
+					else a->auxiliar--;
+				}
+				else{
+					if (a->der == NULL) {
+						if (a->auxiliar == 1) {
+							NodoAB<T> *borrar = a;
+							a = a->izq;
+							delete borrar;
+						}
+						else a->auxiliar--;
+					}
+					else {
+						if (a->auxiliar == 1){
+							NodoABB<T>* minDer = minAux(a->der);
+							a->dato = minDer->dato;
+							a->auxiliar = minDer->auxiliar;
+							int i = minDer->auxiliar;
+							while (i != 0){
+								borrarAux(a->der, minDer->dato);
+							}	
+						}
+						else a->auxiliar--;		
+					}
+				}
+			}
+		}
+	}
+}
+
+template<class T>
+NodoABB<T>* ListaOrdImp2<T>::minAux(NodoABB<T>* a)
+{
+	if (a != NULL) {
+		if (a->izq != NULL) return minAux(a->izq);
+		else return a;
+	}
+	else return NULL;
+}
+
+template<class T>
+NodoABB<T>* ListaOrdImp2<T>::maxAux(NodoABB<T>* a)
+{
+	if (a != NULL) {
+		if (a->der != NULL) return maxAux(a->der);
+		else return a;
+	}
+	else return NULL;
+}
+
+template<class T>
+NodoABB<T>* ListaOrdImp2<T>::recuperarAux(NodoABB<T>* a, const T & e)
+{
+	if (a != NULL){
+		if (e == a->dato) return a;
+		else {
+			if (e < a->dato) return recuperarAux(a->izq, e);
+			else return recuperarAux(a->der, e);
+		}
+	}
+	else return NULL;
+}
 
 #endif

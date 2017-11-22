@@ -59,8 +59,23 @@ protected:
 	NodoABB<T> * arbol; //Lista de elementos en forma de arbol
 	int cantElem; //Cantidad de elementos en la lista
 
-	//Metodos
-	void agregarAux(NodoABB<T> *arbol, const T &e) const; //Funcion auxiliar para agregar elementos de forma ordenada
+	//METODOS AUXILIARES
+
+	//PRE: Recibe un ABB y un elemento a agregar
+	//POS: Modifica el ABB para que contenga el elemento en la posicion correspondiente
+	void agregarAux(NodoABB<T> *a, const T &e) const;
+
+	bool existeAux(NodoABB<T> *a, const T &e) const;
+
+	void borrarAux(NodoABB<T>* a, const T &e);
+
+	NodoABB<T>* minAux(NodoABB<T>* a);
+
+	NodoABB<T>* maxAux(NodoABB<T>* a);
+
+	NodoABB<T>* recuperarAux(NodoABB<T> *a, const T &e);
+
+	
 };
 
 #include "ListaOrdImp2.cpp"
