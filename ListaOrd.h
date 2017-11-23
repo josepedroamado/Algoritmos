@@ -68,7 +68,7 @@ public:
 	virtual const T& Recuperar(const T &e) const abstract;
 
 	// PRE: -
-	// POS: Retorna true sii existe al menos un elemento que sea igual a e
+	// POS: Retorna true si existe al menos un elemento que sea igual a e
 	//		Usa el operador == del elemento e para encontrar uno igual
 	virtual bool Existe(const T &e) const abstract;
 

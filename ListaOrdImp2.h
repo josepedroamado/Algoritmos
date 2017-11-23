@@ -61,21 +61,49 @@ protected:
 
 	//METODOS AUXILIARES
 
-	//PRE: Recibe un ABB y un elemento a agregar
-	//POS: Modifica el ABB para que contenga el elemento en la posicion correspondiente
-	void agregarAux(NodoABB<T> *a, const T &e) const;
+	//PRE: 
+	//POS: Modifica el arbol para que contenga el elemento en la posicion correspondiente
+	void agregarAux(NodoABB<T>* &a, const T &e) const;
 
-	bool existeAux(NodoABB<T> *a, const T &e) const;
+	//PRE: 
+	//POS: Retorna true si el elemento existe en el arbol y false si no existe
+	bool existeAux(NodoABB<T>* a, const T &e) const;
 
-	void borrarAux(NodoABB<T>* a, const T &e);
+	//PRE: 
+	//POS: Elimina el elemento del arbol, si el mismo se encontraba mas de una vez, elimina una instancia del mismo
+	void borrarAux(NodoABB<T>* &a, const T &e);
 
-	NodoABB<T>* minAux(NodoABB<T>* a);
+	//PRE: 
+	//POS: Elimina el elemento mayor del arbol
+	void borrarMaxAux(NodoABB<T>* &a);
 
-	NodoABB<T>* maxAux(NodoABB<T>* a);
+	//PRE: 
+	//POS: Elimina el elemento minimo del arbol
+	void borrarMinAux(NodoABB<T>* &a);
 
-	NodoABB<T>* recuperarAux(NodoABB<T> *a, const T &e);
+	//PRE:
+	//POS: Retorna el valor del minimo del arbol
+	T minAux(NodoABB<T>* a) const;
 
-	
+	//PRE: 
+	//POS: Retorna el nodo del minimo valor del arbol o null si el mismo es vacio
+	NodoABB<T> * minAuxNodo(NodoABB<T>* a) const;
+
+	//PRE: 
+	//POS: Retorna el valor del maximo del arbol
+	T maxAux(NodoABB<T>* a) const;
+
+	//PRE: 
+	//POS: Retorna el valor del maximo del arbol
+	T recuperarAux(NodoABB<T> *a, const T &e) const;
+
+	//PRE:
+	//POS: Carga los elementos del arbol en la lista de menor a mayor
+	void getIteradorAux(NodoABB<T> *a, ListaPosImp<T> *lista) const;
+
+	//PRE:
+	//POS: Imprime los elementos del arbol de menor a mayor
+	void imprimirAux(NodoABB<T> *a, ostream& o) const;
 };
 
 #include "ListaOrdImp2.cpp"
