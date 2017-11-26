@@ -1,4 +1,5 @@
 #include "TablaImp.h"
+#include "ListaOrdImp2.h"
 
 #ifndef TABLAIMP_CPP
 #define TABLAIMP_CPP
@@ -11,40 +12,63 @@ inline ostream &operator<<(ostream& out, const TablaImp<D, R> &t) {
 
 template <class D, class R>
 TablaImp<D, R>::TablaImp() {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	ListaOrd<Asociacion<D, R>> * lista = new ListaOrdImp2<Asociacion<D, R>>();
+	this->tabla = lista;
 }
 
 template <class D, class R>
 TablaImp<D, R>::TablaImp(const Tabla<D,R> &t) {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	ListaOrd<Asociacion<D, R>> * lista = new ListaOrdImp2<Asociacion<D, R>>();
+	this->tabla = lista;
+	*this = t;
 }
 
 template <class D, class R>
 TablaImp<D, R>::TablaImp(const TablaImp<D,R> &t) {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	ListaOrd<Asociacion<D, R>> * lista = new ListaOrdImp2<Asociacion<D, R>>();
+	this->tabla = lista;
+	*this = t;
 }
 
 template <class D, class R>
 Tabla<D,R>& TablaImp<D,R>::operator=(const Tabla<D,R> &t) {
 	if (this != &t) {
-		// NO IMPLEMENTADA
+		//IMPLEMENTADA
+		this->Vaciar();
+		Tabla<D, R> *clone = t.Clon();
+		while (!clone->EsVacia()){
+			D dom = clone->Elemento();
+			R ran = clone->Recuperar(dom);
+			this->Insertar(dom, ran);
+			clone->Borrar(dom);
+		}
 	}
-
 	return *this;
 }
 
 template <class D, class R>
 Tabla<D,R>& TablaImp<D,R>::operator=(const TablaImp<D,R> &t) {
 	if (this != &t) {
-		// NO IMPLEMENTADA
+		//IMPLEMENTADA
+		this->Vaciar();
+		Tabla<D, R> *clone = t.Clon();
+		while (!clone->EsVacia()) {
+			D dom = clone->Elemento();
+			R ran = clone->Recuperar(dom);
+			this->Insertar(dom, ran);
+			clone->Borrar(dom);
+		}
 	}
-
 	return *this;
 }
 
 template <class D, class R>
 TablaImp<D, R>::~TablaImp() {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->Vaciar();
 }
 
 template <class D, class R>
@@ -54,72 +78,99 @@ Tabla<D, R>* TablaImp<D, R>::CrearVacia() const {
 
 template <class D, class R>
 void TablaImp<D, R>::Vaciar() {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	delete this->tabla;
+	this->tabla = NULL;
 }
 
 template <class D, class R>
 void TablaImp<D, R>::Insertar(const D &d, const R &r) {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	if (tabla->Existe(d)) tabla->Borrar(d);
+	Asociacion<D, R> a(d, r);
+	tabla->AgregarOrd(a);
 }
 
 template <class D, class R>
 bool TablaImp<D, R>::EstaDefinida(const D &d) const {
-	// NO IMPLEMENTADA
-	return false;
+	//IMPLEMENTADA
+	if (tabla->Existe(d)) return true;
+	else return false;
 }
 
 template <class D, class R>
 bool TablaImp<D,R>::operator==(const Tabla<D,R> &t) const {
-	// NO IMPLEMENTADA
-	return false; 
+	//IMPLEMENTADA
+	Tabla<D, R> *clone = t.Clon();
+	while (!clone->EsVacia()) {
+		Asociacion<D, R> elemClone = clone->Elemento();	
+		if (this->tabla->Existe(elemClone)) {
+			Asociacion<D, R> elemThis = this->tabla->Recuperar(elemClone);
+			if (elemClone.GetRango() != elemThis.GetRango()) return false;
+		}
+		else return false;
+		clone->Borrar(elemClone.GetDominio());
+	}
+	return true; 
 }; 
 
 template <class D, class R>
 const R& TablaImp<D, R>::Recuperar(const D &d) const {
-	// NO IMPLEMENTADA
-	return *new R();
+	//IMPLEMENTADA
+	return this->tabla->Recuperar(d).GetRango();
 }
 
 template <class D, class R>
 const D& TablaImp<D, R>::Elemento() const {
-	// NO IMPLEMENTADA
-	return *new D();
+	//IMPLEMENTADA
+	return this->tabla->Minimo().GetDominio();;
 }
 
 template <class D, class R>
 void TablaImp<D, R>::Borrar(const D &d) {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
+	this->tabla->Borrar(d);
 }
 
 template <class D, class R>
 bool TablaImp<D, R>::EsVacia() const {
-	// NO IMPLEMENTADA
-	return true;
+	//IMPLEMENTADA
+	return this->tabla->EsVacia();
 }
 
 template <class D, class R>
 bool TablaImp<D, R>::EsLlena() const {
-	// NO IMPLEMENTADA
+	//IMPLEMENTADA
 	return false;
 }
 
 template <class D, class R>
 unsigned int TablaImp<D, R>::CantidadElementos() const {
-	// NO IMPLEMENTADA
-	return 0;
+	//IMPLEMENTADA
+	return this->tabla->CantidadElementos();
 }
 
 template <class D, class R>
 Tabla<D,R>* TablaImp<D, R>::Clon() const {
-	// NO IMPLEMENTADA
-	return new TablaImp<D, R>();
+	//IMPLEMENTADA
+	Tabla<D, R> *newTabla = this->CrearVacia();
+	for (Iterador<Asociacion<D, R>> &i = tabla->GetIterador(); !i.EsFin(); i.Resto()) {
+		Asociacion<D, R> asoc = i.Elemento();
+		newTabla->Insertar(asoc.GetDominio(), asoc.GetRango());
+	}
+	return newTabla;
 }
 
 template <class D, class R>
 void TablaImp<D, R>::Imprimir(ostream & o) const
 {
-	// NO IMPLEMENTADA
-	// en luegar de hacer cout << ... poner o << ...
+	//IMPLEMENTADA
+	// en lugar de hacer cout << ... poner o << ...
+	for (Iterador<Asociacion<D, R>> &i = tabla->GetIterador(); !i.EsFin(); i.Resto()) {
+		Asociacion<D, R> asoc = i.Elemento();
+		o << "{" << "D" << ":" << asoc.GetDominio() << "|" << "R" << ":" << asoc.GetRango() << "}";
+		if (!i.EsFin()) o << " ";
+	}
 }
 
 

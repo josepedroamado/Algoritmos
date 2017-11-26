@@ -5,6 +5,7 @@
 using namespace std;
 
 #include "Tabla.h"
+#include "ListaOrd.h"
 
 template <class D, class R>
 class TablaImp : public Tabla<D, R> {
@@ -43,7 +44,7 @@ public:
 
 protected:
 	// Atributos de la clase
-	
+	ListaOrd <Asociacion<D, R>> * tabla;
 	
 };
 

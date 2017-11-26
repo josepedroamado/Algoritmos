@@ -3,7 +3,6 @@
 
 #include <assert.h>
 #include "ListaOrd.h"
-#include "ListaPosImp.h"
 #include "IteradorListaOrdImp2.h"
 #include "NodoABB.h"
 
