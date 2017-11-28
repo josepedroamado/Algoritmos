@@ -22,7 +22,6 @@ TablaImp<D, R>::TablaImp(const Tabla<D,R> &t) {
 	//IMPLEMENTADA
 	ListaOrd<Asociacion<D, R>> * lista = new ListaOrdImp2<Asociacion<D, R>>();
 	this->tabla = lista;
-	*this = t;
 }
 
 template <class D, class R>
@@ -55,11 +54,11 @@ Tabla<D,R>& TablaImp<D,R>::operator=(const TablaImp<D,R> &t) {
 		//IMPLEMENTADA
 		this->Vaciar();
 		Tabla<D, R> *clone = t.Clon();
-		while (!clone->EsVacia()) {
-			D dom = clone->Elemento();
-			R ran = clone->Recuperar(dom);
-			this->Insertar(dom, ran);
-			clone->Borrar(dom);
+		while (!clone->EsVacia()){
+		D dom = clone->Elemento();
+		R ran = clone->Recuperar(dom);
+		this->Insertar(dom, ran);
+		clone->Borrar(dom);
 		}
 	}
 	return *this;
@@ -69,6 +68,8 @@ template <class D, class R>
 TablaImp<D, R>::~TablaImp() {
 	//IMPLEMENTADA
 	this->Vaciar();
+	delete this->tabla;
+	this->tabla = NULL;
 }
 
 template <class D, class R>
@@ -80,7 +81,7 @@ template <class D, class R>
 void TablaImp<D, R>::Vaciar() {
 	//IMPLEMENTADA
 	delete this->tabla;
-	this->tabla = NULL;
+	this->tabla = new ListaOrdImp2<Asociacion<D, R>>();
 }
 
 template <class D, class R>
@@ -101,9 +102,11 @@ bool TablaImp<D, R>::EstaDefinida(const D &d) const {
 template <class D, class R>
 bool TablaImp<D,R>::operator==(const Tabla<D,R> &t) const {
 	//IMPLEMENTADA
+	if (this->EsVacia() && t.EsVacia()) return true;
 	Tabla<D, R> *clone = t.Clon();
 	while (!clone->EsVacia()) {
 		Asociacion<D, R> elemClone = clone->Elemento();	
+		elemClone.SetRango(clone->Recuperar(elemClone.GetDominio()));
 		if (this->tabla->Existe(elemClone)) {
 			Asociacion<D, R> elemThis = this->tabla->Recuperar(elemClone);
 			if (elemClone.GetRango() != elemThis.GetRango()) return false;
@@ -123,9 +126,9 @@ const R& TablaImp<D, R>::Recuperar(const D &d) const {
 template <class D, class R>
 const D& TablaImp<D, R>::Elemento() const {
 	//IMPLEMENTADA
-	Asociacion<D, R> elem = this->tabla->Minimo();
-	D ret = elem.GetDominio();
-	return ret;
+	/*Asociacion<D, R> elem = this->tabla->Minimo();
+	D ret = elem.GetDominio();*/
+	return this->tabla->Minimo().GetDominio();
 }
 
 template <class D, class R>

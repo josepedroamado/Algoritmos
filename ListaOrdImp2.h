@@ -82,7 +82,7 @@ protected:
 
 	//PRE:
 	//POS: Retorna el valor del minimo del arbol
-	T minAux(NodoABB<T>* a) const;
+	T& minAux(NodoABB<T>* a) const;
 
 	//PRE: 
 	//POS: Retorna el nodo del minimo valor del arbol o null si el mismo es vacio
@@ -90,11 +90,11 @@ protected:
 
 	//PRE: 
 	//POS: Retorna el valor del maximo del arbol
-	T maxAux(NodoABB<T>* a) const;
+	T& maxAux(NodoABB<T>* a) const;
 
 	//PRE: 
 	//POS: Retorna el valor del maximo del arbol
-	T recuperarAux(NodoABB<T> *a, const T &e) const;
+	T& recuperarAux(NodoABB<T> *a, const T &e) const;
 
 	//PRE:
 	//POS: Carga los elementos del arbol en la lista de menor a mayor
@@ -103,6 +103,10 @@ protected:
 	//PRE:
 	//POS: Imprime los elementos del arbol de menor a mayor
 	void imprimirAux(NodoABB<T> *a, ostream& o) const;
+
+	//PRE: 
+	//POS: Elimina todos los nodos del arbol
+	void borrarTodo(NodoABB<T>* &a);
 };
 
 #include "ListaOrdImp2.cpp"

@@ -140,8 +140,7 @@ void ListaOrdImp2<T>::Vaciar()
 {
 	//IMPLEMENTADA
 	this->cantElem = 0;
-	delete this->arbol;
-	this->arbol = NULL;
+	borrarTodo(arbol);
 }
 
 template <class T>
@@ -316,7 +315,7 @@ void ListaOrdImp2<T>::borrarMinAux(NodoABB<T>* &a)
 }
 
 template<class T>
-T ListaOrdImp2<T>::minAux(NodoABB<T>* a) const
+T& ListaOrdImp2<T>::minAux(NodoABB<T>* a) const
 {
 	assert(a != NULL);
 	if (a->izq != NULL) return minAux(a->izq);
@@ -334,7 +333,7 @@ NodoABB<T>* ListaOrdImp2<T>::minAuxNodo(NodoABB<T>* a) const
 }
 
 template<class T>
-T ListaOrdImp2<T>::maxAux(NodoABB<T>* a) const
+T& ListaOrdImp2<T>::maxAux(NodoABB<T>* a) const
 {
 	assert(a != NULL);
 	if (a->der != NULL) return maxAux(a->der);
@@ -342,16 +341,14 @@ T ListaOrdImp2<T>::maxAux(NodoABB<T>* a) const
 }
 
 template<class T>
-T ListaOrdImp2<T>::recuperarAux(NodoABB<T>* a, const T & e) const
+T& ListaOrdImp2<T>::recuperarAux(NodoABB<T>* a, const T & e) const
 {
-	if (a != NULL){
-		if (e == a->dato) return a->dato;
-		else {
-			if (e < a->dato) return recuperarAux(a->izq, e);
-			else return recuperarAux(a->der, e);
-		}
+	assert(a != NULL);
+	if (e == a->dato) return a->dato;
+	else {
+		if (e < a->dato) return recuperarAux(a->izq, e);
+		else return recuperarAux(a->der, e);
 	}
-	else return NULL;
 }
 
 template<class T>
@@ -380,6 +377,17 @@ void ListaOrdImp2<T>::imprimirAux(NodoABB<T>* a, ostream& o) const
 			if (i != 0) o << " ";
 		}
 		imprimirAux(a->der, o);
+	}
+}
+
+template<class T>
+void ListaOrdImp2<T>::borrarTodo(NodoABB<T>* &a)
+{
+	if (a != NULL){
+		borrarTodo(a->izq);
+		borrarTodo(a->der);
+		delete a;
+		a = NULL;
 	}
 }
 
