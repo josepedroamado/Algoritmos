@@ -123,7 +123,9 @@ const R& TablaImp<D, R>::Recuperar(const D &d) const {
 template <class D, class R>
 const D& TablaImp<D, R>::Elemento() const {
 	//IMPLEMENTADA
-	return this->tabla->Minimo().GetDominio();;
+	Asociacion<D, R> elem = this->tabla->Minimo();
+	D ret = elem.GetDominio();
+	return ret;
 }
 
 template <class D, class R>

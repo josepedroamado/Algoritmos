@@ -318,11 +318,9 @@ void ListaOrdImp2<T>::borrarMinAux(NodoABB<T>* &a)
 template<class T>
 T ListaOrdImp2<T>::minAux(NodoABB<T>* a) const
 {
-	if (a != NULL) {
-		if (a->izq != NULL) return minAux(a->izq);
-		else return a->dato;
-	}
-	else return NULL;
+	assert(a != NULL);
+	if (a->izq != NULL) return minAux(a->izq);
+	else return a->dato;
 }
 
 template<class T>
@@ -338,11 +336,9 @@ NodoABB<T>* ListaOrdImp2<T>::minAuxNodo(NodoABB<T>* a) const
 template<class T>
 T ListaOrdImp2<T>::maxAux(NodoABB<T>* a) const
 {
-	if (a != NULL) {
-		if (a->der != NULL) return maxAux(a->der);
-		else return a->dato;
-	}
-	else return NULL;
+	assert(a != NULL);
+	if (a->der != NULL) return maxAux(a->der);
+	else return a->dato;
 }
 
 template<class T>
