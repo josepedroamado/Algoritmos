@@ -145,8 +145,7 @@ unsigned int PilaImp<T>::CantidadElementos() const {
 template<class T>
 bool PilaImp<T>::EsVacia() const {
 	//IMPLEMENTADA
-	if (cantElem == 0) return true;
-	else return false;
+	return cantElem == 0;
 }
 
 template <class T>

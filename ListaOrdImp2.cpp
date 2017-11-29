@@ -154,8 +154,7 @@ template <class T>
 bool ListaOrdImp2<T>::EsVacia()const 
 {
 	//IMPLEMENTADA
-	if (cantElem == 0) return true;
-	else return false;
+	return cantElem == 0;
 }
 
 template <class T>
@@ -362,21 +361,6 @@ void ListaOrdImp2<T>::getIteradorAux(NodoABB<T>* a, ListaPosImp<T>* lista) const
 			i--;
 		}
 		getIteradorAux(a->der, lista);
-	}
-}
-
-template<class T>
-void ListaOrdImp2<T>::imprimirAux(NodoABB<T>* a, ostream& o) const
-{
-	if (a != NULL){
-		imprimirAux(a->izq, o);
-		int i = a->auxiliar;
-		while (i != 0) {
-			o << a->dato;
-			i--;
-			if (i != 0) o << " ";
-		}
-		imprimirAux(a->der, o);
 	}
 }
 

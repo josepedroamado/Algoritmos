@@ -157,8 +157,7 @@ unsigned int ColaImp<T>::CantidadElementos()const{
 template <class T>
 bool ColaImp<T>::EsVacia() const{
 	//IMPLEMENTADA
-	if (cantElem == 0) return true;
-	else return false;
+	return cantElem == 0;
 }
 
 template <class T>

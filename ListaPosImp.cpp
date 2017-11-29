@@ -164,9 +164,7 @@ unsigned int ListaPosImp<T>::Posicion(const T &e) const
 {
 	//IMPLEMENTADA
 	int pos = 0;
-	while (list[pos] != e){
-		pos++;
-	}
+	while (list[pos] != e) pos++;
 	return pos;
 }
 
@@ -174,9 +172,7 @@ template <class T>
 bool ListaPosImp<T>::Existe(const T &e) const
 {
 	//IMPLEMENTADA
-	for (unsigned int i = 0; i < this->cantElem; i++){
-		if (list[i] == e) return true;
-	}
+	for (unsigned int i = 0; i < this->cantElem; i++) if (list[i] == e) return true;
 	return false;
 }
 
@@ -198,8 +194,7 @@ template <class T>
 bool ListaPosImp<T>::EsVacia() const
 {
 	//IMPLEMENTADA
-	if (this->cantElem == 0) return true;
-	else return false;
+	return this->cantElem == 0;
 }
 
 template <class T>
@@ -247,15 +242,11 @@ void ListaPosImp<T>::Redimensionar() {
 
 template <class T>
 void ListaPosImp<T>::Shift_Right(int pos) {
-	for (int i = this->cantElem - 1; i >= pos && i > -1; i--){
-		list[i + 1] = list[i];
-	}
+	for (int i = this->cantElem - 1; i >= pos && i > -1; i--) list[i + 1] = list[i];
 }
 
 template <class T>
 void ListaPosImp<T>::Shift_Left(int pos) {
-	for (int i = pos; i <= this->cantElem - 1; i++) {
-		list[i] = list[i+1];
-	}
+	for (int i = pos; i <= this->cantElem - 1; i++)	list[i] = list[i+1];
 }
 #endif

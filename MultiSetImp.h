@@ -2,6 +2,7 @@
 #define MULTISET_IMP_H
 
 #include "MultiSet.h"
+#include "ListaOrd.h"
 
 template <class T>
 class MultiSetImp: public MultiSet<T> {
@@ -45,7 +46,8 @@ public:
 	void Imprimir(ostream& o) const;
 private:
 	// Atributos de la clase
-	
+	ListaOrd<T>* lista; //Lista que contiene los elementos
+	int cardinal; //Numero de elementos distintos
 	
 };
 

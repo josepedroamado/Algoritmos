@@ -22,6 +22,7 @@ TablaImp<D, R>::TablaImp(const Tabla<D,R> &t) {
 	//IMPLEMENTADA
 	ListaOrd<Asociacion<D, R>> * lista = new ListaOrdImp2<Asociacion<D, R>>();
 	this->tabla = lista;
+	*this = t;
 }
 
 template <class D, class R>
@@ -95,26 +96,27 @@ void TablaImp<D, R>::Insertar(const D &d, const R &r) {
 template <class D, class R>
 bool TablaImp<D, R>::EstaDefinida(const D &d) const {
 	//IMPLEMENTADA
-	if (tabla->Existe(d)) return true;
-	else return false;
+	return tabla->Existe(d);
 }
 
 template <class D, class R>
 bool TablaImp<D,R>::operator==(const Tabla<D,R> &t) const {
 	//IMPLEMENTADA
 	if (this->EsVacia() && t.EsVacia()) return true;
+	bool ret = true;
 	Tabla<D, R> *clone = t.Clon();
 	while (!clone->EsVacia()) {
 		Asociacion<D, R> elemClone = clone->Elemento();	
 		elemClone.SetRango(clone->Recuperar(elemClone.GetDominio()));
 		if (this->tabla->Existe(elemClone)) {
 			Asociacion<D, R> elemThis = this->tabla->Recuperar(elemClone);
-			if (elemClone.GetRango() != elemThis.GetRango()) return false;
+			if (elemClone.GetRango() != elemThis.GetRango()) ret = false;
 		}
-		else return false;
+		else ret = false;
 		clone->Borrar(elemClone.GetDominio());
 	}
-	return true; 
+	delete clone;
+	return ret; 
 }; 
 
 template <class D, class R>
@@ -126,8 +128,6 @@ const R& TablaImp<D, R>::Recuperar(const D &d) const {
 template <class D, class R>
 const D& TablaImp<D, R>::Elemento() const {
 	//IMPLEMENTADA
-	/*Asociacion<D, R> elem = this->tabla->Minimo();
-	D ret = elem.GetDominio();*/
 	return this->tabla->Minimo().GetDominio();
 }
 
